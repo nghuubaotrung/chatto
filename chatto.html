@@ -1,0 +1,24 @@
+<head>
+  <title>chatto</title>
+</head>
+
+<body>
+  <h1>Welcome to Chatto!</h1>
+
+  {{> send}}
+  {{> history}}
+</body>
+
+<template name="history">
+  <ul>
+    {{#each messages}}
+    <li>[{{user_name}}]: {{message}} ({{cdate}})</li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="send">
+  お名前: <input type="text" id="user_name" />
+  コメント: <input type="text" id="message" />
+  <input type="button" id="send" value="投稿" />
+</template>
