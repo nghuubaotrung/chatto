@@ -22,9 +22,8 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function() {
     if(Messages.find().count() === 0) {
-      // Messages コレクションの内容が0件だった場合、Messages コレクションにドキュメントを追加します。
       Messages.insert(
-        {user_name: 'Test', message: 'こんにちは!!!チュンです！', date: new Date()}
+        {user_name: "ADMIN", message: "Welcome to TheCat's chat system", date: new Date()}
       );
     }
   });
